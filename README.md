@@ -149,6 +149,12 @@ S3_ASSET_HOST_URL
 S3_CACHE_CONTROL
 ```
 
+### S3_ENDPOINT
+```
+S3_ENDPOINT=$url_of_your_custom_endpoint
+```
+Use an alternative enpoint for S3 API.
+
 ## SMTP configuration
 
 ```
