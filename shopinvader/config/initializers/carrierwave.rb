@@ -21,7 +21,9 @@ CarrierWave.configure do |config|
 
     # Use a different endpoint (eg: another provider such as Exoscale)
     if ENV['S3_ENDPOINT'].present?
-      config.aws_credentials.config = AWS.config({
+      # Watchout on `AWS` var name: sdk > 2.x uses `Aws`
+      # https://stackoverflow.com/questions/22826432/error-uninitialized-constant-aws-nameerror
+      config.aws_credentials.config = Aws.config({
         s3_endpoint: ENV['S3_ENDPOINT']
       })
     end
